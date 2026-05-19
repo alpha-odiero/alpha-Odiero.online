@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Alpha | Alpha Odiero - Full-Stack Developer & Designer</title>
+    <meta name="description"
+        content="Portfolio of Alpha Odiero (Developer Alpha), a Kenyan Full-Stack Developer, UI/UX Designer, and Cybersecurity Enthusiast. Building secure and scalable digital experiences.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+
+             Alpha Odiero
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Slide Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation (Floating Bottom) -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="#home" class="active"><i data-lucide="home"></i>Home</a></li>
+            <li><a href="#about"><i data-lucide="user"></i>About</a></li>
+            <li><a href="#projects"><i data-lucide="briefcase"></i>Projects</a></li>
+            <li><a href="#contact"><i data-lucide="mail"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero map-bg map-bg-world">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <span class="hero-nickname">Developer Alpha</span>
+                <h1 class="hero-title"><span class="hero-highlight">Building</span> <span class="typing-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    Passionate Kenyan software developer focused on building secure, scalable, and visually engaging
+                    digital systems combining software engineering, design, and cybersecurity principles.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Let's Work Together</a>
+                </div>
+                <div class="social-connect-wrapper">
+                    <div class="social-connect-text">
+                        <span class="follow-text">Follow me</span><span class="colon">:</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://wa.me/254715519158" class="social-icon whatsapp" title="WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/alfaodiero" class="social-icon facebook" title="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://tiktok.com/@alphaodiero" class="social-icon tiktok" title="TikTok"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://linkedin.com/in/alphaodiero" class="social-icon linkedin" title="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://t.me/alphaodiero" class="social-icon telegram" title="Telegram"><i
+                                class="fa-brands fa-telegram-plane"></i></a>
+                        <a href="mailto:collinsodiera8@gmail.com" class="social-icon email" title="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/alpha-odiero" class="social-icon github" title="GitHub"><i
+                                class="fa-brands fa-git-alt"></i><span class="git-text">git</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-flow-diagram reveal">
+                <!-- SVG connecting lines -->
+                <svg class="flow-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M 16 20 C 33 20, 33 45, 50 45 C 66 45, 66 20, 84 20" fill="none" stroke="rgba(234, 88, 12, 0.4)" stroke-width="0.5" stroke-dasharray="1 1" class="flow-path-anim"/>
+                    <path d="M 84 20 C 110 20, -10 70, 16 70" fill="none" stroke="rgba(234, 88, 12, 0.4)" stroke-width="0.5" stroke-dasharray="1 1" class="flow-path-anim"/>
+                    <path d="M 16 70 C 33 70, 33 95, 50 95 C 66 95, 66 70, 84 70" fill="none" stroke="rgba(234, 88, 12, 0.4)" stroke-width="0.5" stroke-dasharray="1 1" class="flow-path-anim"/>
+                </svg>
+
+                <!-- Cards -->
+                <div class="flow-card card-black">
+                    <div class="flow-pin"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">01</span>
+                            <i data-lucide="lightbulb" class="flow-icon"></i>
+                        </div>
+                        <h4>Idea</h4>
+                        <p>Think of a problem to solve.</p>
+                        <div class="flow-example">Example: "I want a website that helps students learn coding."</div>
+                    </div>
+                </div>
+
+                <div class="flow-card card-yellow">
+                    <div class="flow-pin pin-red"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">02</span>
+                            <i data-lucide="map" class="flow-icon"></i>
+                        </div>
+                        <h4>Plan</h4>
+                        <p>Define features, tools, users, and goals.</p>
+                        <div class="flow-example">Login &bull; Dashboard &bull; Lessons</div>
+                    </div>
+                </div>
+
+                <div class="flow-card card-orange">
+                    <div class="flow-pin pin-green"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">03</span>
+                            <i data-lucide="pen-tool" class="flow-icon"></i>
+                        </div>
+                        <h4>Design</h4>
+                        <p>Create UI/UX layouts and app structure.</p>
+                        <div class="flow-example">Figma &bull; Canva</div>
+                    </div>
+                </div>
+
+                <div class="flow-card card-black">
+                    <div class="flow-pin pin-pink"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">04</span>
+                            <i data-lucide="code" class="flow-icon"></i>
+                        </div>
+                        <h4>Code</h4>
+                        <p>Build the software using programming languages.</p>
+                        <div class="flow-example">VS Code &bull; Node.js &bull; React &bull; MongoDB</div>
+                    </div>
+                </div>
+
+                <div class="flow-card card-yellow">
+                    <div class="flow-pin pin-teal"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">05</span>
+                            <i data-lucide="bug" class="flow-icon"></i>
+                        </div>
+                        <h4>Test</h4>
+                        <p>Find and fix bugs.</p>
+                        <div class="flow-example">Performance &bull; Security &bull; Mobile</div>
+                    </div>
+                </div>
+
+                <div class="flow-card card-orange">
+                    <div class="flow-pin pin-blue"></div>
+                    <div class="flow-card-content">
+                        <div class="flow-header">
+                            <span class="flow-number">06</span>
+                            <i data-lucide="rocket" class="flow-icon"></i>
+                        </div>
+                        <h4>Deploy</h4>
+                        <p>Put the software online for users.</p>
+                        <div class="flow-example">Vercel &bull; Netlify &bull; Render</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="map-bg map-bg-africa">
+        <div class="container about-grid">
+            <div class="about-img reveal">
+                <img src="images/main.jpg" alt="Alpha Odiero" referrerPolicy="no-referrer">
+            </div>
+            <div class="about-content reveal">
+                <span class="section-tag">My Story</span>
+                <h2 class="section-title">Who is Alpha?</h2>
+                <h3>Bridging Design & Development</h3>
+                <p>My journey into software development started with a curiosity for how things work under the hood.
+                    Over the years, I've evolved into a developer who doesn't just write code but designs experiences.
+                </p>
+                <p>With a strong foundation in UI/UX and Graphic Design, I ensure that every system I build is not only
+                    powerful and secure but also intuitive and visually stunning.</p>
+                <p>My passion for cybersecurity drives me to implement zero-trust principles in every line of code,
+                    ensuring that performance never comes at the cost of safety.</p>
+                <button class="btn btn-outline" data-modal="workflowModal">Read More About My Process</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">What I Do</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i data-lucide="server"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>Building high-performance, secure, and scalable server-side systems and APIs.</p>
+                    <button class="btn btn-outline" data-modal="webDevModal">Read More</button>
+                </div>
+                <div class="service-card reveal uiux-card">
+                    <div class="service-icon"><i data-lucide="figma"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting intuitive and accessible user interfaces that provide exceptional digital experiences.
+                    </p>
+                    <button class="btn btn-outline" data-modal="uiuxModal">Read More</button>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i data-lucide="layout-grid"></i></div>
+                    <h3>Graphic Design</h3>
+                    <p>Creating impact through visual identity, branding, and professional layouts.</p>
+                    <button class="btn btn-outline" data-modal="graphicModal">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-soft">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">My Tech Stack</h2>
+            </div>
+            <div class="skills-container">
+                <!-- Frontend -->
+                <div class="skill-card reveal">
+                    <h4><i data-lucide="monitor"></i> Frontend</h4>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML5/CSS3</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JavaScript (ES6+)</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>React.js</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Responsive Design</span></div>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-card reveal backend-card">
+                    <h4><i data-lucide="server"></i> Backend</h4>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Node.js / Express</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>REST APIs</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>MongoDB</span></div>
+                    </div>
+                </div>
+                <!-- Design -->
+                <div class="skill-card reveal">
+                    <h4><i data-lucide="pen-tool"></i> Design</h4>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Figma</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Photoshop / Illustrator</span></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Canva</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Selected Works</h2>
+            </div>
+
+            <div class="project-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="design">UI/UX & Graphics</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project: Kilimo Bora -->
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-img">
+                        <img src="images/land.jpg" alt="Kilimo Bora" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Agri-Tech</span>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <h3>Kilimo Bora</h3>
+                        <p>An agricultural tech platform designed to empower Kenyan farmers with modern digital tools
+                            for better yield management and market access.</p>
+                        <div class="project-links">
+                            <a href="https://kilimo-bora-amber.vercel.app/" target="_blank" class="project-link"><i
+                                    data-lucide="external-link"></i> Live Demo</a>
+                            <a href="https://github.com/alpha-odiero" target="_blank" class="project-link"><i
+                                    data-lucide="github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project shishi -->
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-img">
+                        <img src="images/rest.jpg" alt="SecuFlow" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Refreshment</span>
+                            <span class="project-tag">Dashboard</span>
+                        </div>
+                        <h3>shushi restaurant</h3>
+                        <p>A project designed to help cleants who are visiting shushi,to have a good time to know more
+                            about their services all in one place.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i data-lucide="external-link"></i> Case Study</a>
+                            <a href="https://github.com/alpha-odiero" target="_blank" class="project-link"><i
+                                    data-lucide="github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project: Kingstone 2 -->
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-img">
+                        <img src="images/bnb.jpg" alt="Kingstone Resort" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Agri-Tech</span>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <h3>Kingstone resort</h3>
+                        <p>Kingstone Resort serves Kenyans by offering comfortable accommodation, quality hospitality,
+                            delicious meals, relaxation facilities, conference services, and tourism experiences that
+                            support local travel, employment opportunities, and economic growth within communities..</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i> Live
+                                Demo coming soon</a>
+                            <a href="https://github.com/alpha-odiero" target="_blank" class="project-link"><i
+                                    data-lucide="github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project: Kilimo Bora -->
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-img">
+                        <img src="images/eco.jpg" alt="Kilimo Bora" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Eco care</span>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <h3>Eco care</h3>
+                        <p>A company requested for a Full-Stack web Application were they connect across the globe to
+                            save the earth and improve naturea energy.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i> Case
+                                study</a>
+                            <a href="https://github.com/alpha-odiero" target="_blank" class="project-link"><i
+                                    data-lucide="github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Brand Identity -->
+                <div class="project-card reveal" data-category="design">
+                    <div class="project-img">
+                        <!-- Placeholder image for Brand Identity -->
+                        <img src="images/Kryon™ - Brand Guidelines.jpg" alt="Brand Identity"
+                            referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Branding</span>
+                            <span class="project-tag">Graphic Design</span>
+                        </div>
+                        <h3>Corporate Brand Identity</h3>
+                        <p>A comprehensive branding project including logo design, color palette, and brand guidelines
+                            for a tech startup.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-modal="brandGalleryModal"><i data-lucide="eye"></i>
+                                View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Mobile App UI -->
+                <div class="project-card reveal" data-category="design">
+                    <div class="project-img">
+                        <!-- Placeholder image for Mobile App UI -->
+                        <img src="images/Instagram (1).jpg" alt="Mobile App UI" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">Mobile</span>
+                        </div>
+                        <h3>Eco-Friendly Mobile App</h3>
+                        <p>User interface design for a mobile application focused on tracking carbon footprint and
+                            sustainable living.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-modal="brandGalleryModal"><i data-lucide="eye"></i>
+                                View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Dashboard UX -->
+                <div class="project-card reveal" data-category="design">
+                    <div class="project-img">
+                        <!-- Placeholder image for Dashboard UX -->
+                        <img src="images/Saas Dashboard Series - Orders - S_ Datta.jpg" alt="Dashboard UX"
+                            referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">Web App</span>
+                        </div>
+                        <h3>SaaS Analytics Dashboard</h3>
+                        <p>Designed a complex data visualization dashboard for a business intelligence platform with a
+                            focus on usability.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-modal="brandGalleryModal"><i data-lucide="eye"></i>
+                                View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Marketing Kit -->
+                <div class="project-card reveal" data-category="design">
+                    <div class="project-img">
+                        <!-- Placeholder image for Marketing Kit -->
+                        <img src="images/Top Digital Marketing Agency in Pakistan.jpg" alt="Marketing Kit"
+                            referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Digital Art</span>
+                            <span class="project-tag">Marketing</span>
+                        </div>
+                        <h3>Digital Marketing Campaign</h3>
+                        <p>A series of high-impact visual assets created for a social media marketing campaign reaching
+                            over 100k users.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-modal="brandGalleryModal"><i data-lucide="eye"></i>
+                                View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: E-commerce Design -->
+                <div class="project-card reveal" data-category="design">
+                    <div class="project-img">
+                        <!-- Placeholder image for E-commerce Design -->
+                        <img src="images/Clothing Ad Flyer Design.jpg" alt="E-commerce Design"
+                            referrerPolicy="no-referrer">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">E-commerce</span>
+                        </div>
+                        <h3>Fashion E-commerce Concept</h3>
+                        <p>Modern and minimalist design for a high-end fashion retailer, focusing on seamless product
+                            discovery.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-modal="brandGalleryModal"><i data-lucide="eye"></i>
+                                View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="map-bg map-bg-world map-bg-orange">
+        <div class="container contact-grid">
+            <div class="contact-info reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i data-lucide="phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Call Me</h4>
+                            <p>+254 715 519 158</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i data-lucide="mail"></i></div>
+                        <div class="contact-details">
+                            <h4>Email Me</h4>
+                            <p>collinsodiera8@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                        <div class="contact-details">
+                            <h4>Find Me</h4>
+                            <p>Nakuru, Bahati, Maili Saba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form reveal">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="How can I help you?" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="status">
+                    <div class="status-dot"></div>
+                    Available for new projects
+                </div>
+                <a href="#" class="footer-logo">
+                    <div class="logo-icon"
+                        style="display:inline-flex; vertical-align:middle; margin-right:8px; width:28px; height:28px; font-size:0.6rem;">
+                    </div>
+                    Developer Alpha
+                </a>
+                <p>Building secure, scalable, and visually engaging digital systems. Combining software development with
+                    cybersecurity and design.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#" data-modal="faqModal">FAQs</a></li>
+                    <li><a href="#" data-modal="testimonialModal">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Social</h4>
+                <div class="social-icons" style="justify-content: flex-start; gap: 10px;">
+                    <a href="https://wa.me/254715519158" class="social-icon whatsapp" title="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://facebook.com/alfaodiero" class="social-icon facebook" title="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@alphaodiero" class="social-icon tiktok" title="TikTok"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://linkedin.com/in/alphaodiero" class="social-icon linkedin" title="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Designed and Developed by Developer Alpha. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Workflow Modal -->
+    <div id="workflowModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">My Project Workflow: How I Handle Projects From Start to Finish</h2>
+            <div class="workflow-steps">
+                <div class="faq-item">
+                    <div class="faq-question">1. Discovery & Consultation <span>+</span></div>
+                    <div class="faq-answer">Every project begins with understanding the client’s goals, audience, and
+                        vision. During this phase, I discuss requirements, understand business goals, identify target
+                        users, analyze competitors, and define project scope to create a strong foundation.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">2. Planning & Strategy <span>+</span></div>
+                    <div class="faq-answer">I create a clear project plan including system architecture, feature
+                        planning, user flow mapping, and technology selection. I recommend solutions based on
+                        scalability, performance, and budget.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">3. UI/UX Design <span>+</span></div>
+                    <div class="faq-answer">Before coding, I design the visual experience. This includes wireframes, UI
+                        mockups, color systems, and typography. I collaborate closely with clients to refine the design
+                        until it aligns with their vision.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">4. Development Phase <span>+</span></div>
+                    <div class="faq-answer">I focus on clean, maintainable code, responsive design, fast performance,
+                        and security best practices. I build everything from frontend interfaces to secure backend APIs
+                        and databases.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">5. Client Collaboration & Feedback <span>+</span></div>
+                    <div class="faq-answer">Communication is maintained throughout. I provide regular progress updates,
+                        preview links, and revision opportunities. This ensures clients stay involved and informed at
+                        every stage.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">6. Testing & Optimization <span>+</span></div>
+                    <div class="faq-answer">Before launch, the project is thoroughly tested for mobile responsiveness,
+                        browser compatibility, performance, and security issues to deliver a stable, polished, and
+                        professional product.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">7. Deployment & Launch <span>+</span></div>
+                    <div class="faq-answer">After final approval, I deploy the project to production. This includes
+                        domain connection, hosting setup, SSL configuration, and database deployment.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">8. Post-Launch Support <span>+</span></div>
+                    <div class="faq-answer">Even after deployment, I continue supporting clients with maintenance,
+                        updates, feature improvements, and bug fixes for continuous improvement.</div>
+                </div>
+            </div>
+            <div class="collaboration-approach"
+                style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">My Collaboration Approach</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="project-tag">Clear communication</span>
+                    <span class="project-tag">Transparency</span>
+                    <span class="project-tag">Timely delivery</span>
+                    <span class="project-tag">Creative problem-solving</span>
+                    <span class="project-tag">Attention to detail</span>
+                    <span class="project-tag">Client satisfaction</span>
+                    <span class="project-tag">Scalable and secure solutions</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Modal -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Who is Alpha Odiero? <span>+</span></div>
+                    <div class="faq-answer">I’m Alpha Odiero, also known as Engineer Alpha — a Kenyan Full-Stack
+                        Developer, UI/UX Designer, Graphic Designer, and Cybersecurity Enthusiast passionate about
+                        building modern digital products and scalable web applications.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What services do you offer? <span>+</span></div>
+                    <div class="faq-answer">I offer a wide range of services including: Full-Stack Web Development,
+                        Frontend Development, UI/UX Design, Graphic Design, Portfolio & Business Websites, Landing
+                        Pages, E-commerce Development, Branding & Visual Design, and Website Maintenance & Optimization.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Which technologies do you use? <span>+</span></div>
+                    <div class="faq-answer">I work with technologies such as: HTML, CSS, JavaScript, React.js, Node.js,
+                        Express.js, MongoDB, Git & GitHub, REST APIs, Figma, and Adobe Photoshop & Illustrator. I’m also
+                        expanding my skills in DevOps, backend architecture, and cybersecurity.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are you available for freelance work? <span>+</span></div>
+                    <div class="faq-answer">Yes. I’m available for freelance projects, collaborations, startup
+                        partnerships, and creative digital solutions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you design both websites and graphics? <span>+</span></div>
+                    <div class="faq-answer">Yes. I combine development and design skills to create complete digital
+                        experiences — from UI/UX design and branding to fully functional websites and applications.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can you build responsive mobile-friendly websites? <span>+</span></div>
+                    <div class="faq-answer">Absolutely. All websites I create are fully responsive and optimized for
+                        desktops, tablets, and mobile devices.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you work with startups and personal brands? <span>+</span></div>
+                    <div class="faq-answer">Yes. I enjoy helping startups, entrepreneurs, creators, and businesses build
+                        strong online identities and scalable digital products.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to complete a project? <span>+</span></div>
+                    <div class="faq-answer">Project timelines depend on complexity and features. Small websites may take
+                        a few days, while advanced applications can take several weeks.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide website maintenance after deployment? <span>+</span></div>
+                    <div class="faq-answer">Yes. I can help with: bug fixes, updates, performance optimization, security
+                        improvements, feature additions, and ongoing support.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What makes your work different? <span>+</span></div>
+                    <div class="faq-answer">I focus on: clean modern UI, smooth user experience, performance
+                        optimization, scalable architecture, secure coding practices, creative visual design, and
+                        attention to detail.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are you learning new technologies? <span>+</span></div>
+                    <div class="faq-answer">Yes. I continuously learn and experiment with modern technologies, backend
+                        systems, DevOps tools, AI integrations, and cybersecurity concepts to improve my skills.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can clients contact you? <span>+</span></div>
+                    <div class="faq-answer">You can contact me through Email, WhatsApp, LinkedIn, Instagram, Facebook,
+                        or the portfolio contact form.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Modal -->
+    <div id="testimonialModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">What My Clients Say</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Alpha is far more than just a developer; he's a visionary architect. He didn't just build the
+                        Kilimo Bora platform; he understood the challenges of our local farmers and built a scalable
+                        system that truly empowers them."</p>
+                    <h4>Peter N., Founder of AgriTech Solutions, Nairobi</h4>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The security audit Alpha conducted for our fintech application was eye-opening. He identified
+                        critical vulnerabilities we had overlooked and helped us implement a robust security framework.
+                        A true professional."</p>
+                    <h4>Sarah J., Lead Developer at Tech Hub Kenya</h4>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Finding a developer who truly understands design is rare. Alpha redesigned our brand identity
+                        and built a high-performance booking system that significantly increased our conversion rates.
+                        Highly recommended!"</p>
+                    <h4>David O., Marketing Director at Luxe Stays</h4>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Alpha delivered a sleek, fast, and secure portfolio that has already helped me land three new
+                        clients. His process is transparent, highly collaborative, and he really cares about the final
+                        user experience."</p>
+                    <h4>Anita W., Freelance Consultant</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Backend Development Modal -->
+    <div id="webDevModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">Backend Development</h2>
+            <p>I specialize in building robust and scalable backend systems using Node.js and Express. My focus is on
+                creating secure APIs, managing databases with MongoDB, and ensuring high performance.</p>
+            <ul style="margin-top: 1.5rem; list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> RESTful API
+                    Design</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Database
+                    Schema Modeling</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> JWT & OAuth
+                    Authentication</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- UI/UX Design Modal -->
+    <div id="uiuxModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">UI/UX Design</h2>
+            <p>I create user-centric designs that are intuitive and accessible. My process involves deep research and
+                prototyping to ensure the best digital experience.</p>
+            <ul style="margin-top: 1.5rem; list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> User
+                    Research & Persona</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Interactive
+                    Prototyping (Figma)</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Usability
+                    Testing</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Graphic Design Modal -->
+    <div id="graphicModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">Graphic Design</h2>
+            <p>I help brands communicate their message through compelling visual storytelling. I ensure a consistent and
+                professional brand identity across all platforms.</p>
+            <ul style="margin-top: 1.5rem; list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Brand
+                    Identity & Logo Design</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Marketing
+                    Material Layouts</li>
+                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i
+                        data-lucide="check-circle-2" style="color: var(--accent-orange); width: 18px;"></i> Digital
+                    Content Creation</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Brand Gallery Modal -->
+    <div id="brandGalleryModal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">Graphics & Design Gallery</h2>
+            <p>Explore the visual elements and design process for our happy clients.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/Kryon™ - Brand Guidelines.jpg" alt="Brand Item 1"></div>
+                <div class="gallery-item"><img src="images/Instagram (1).jpg" alt="Brand Item 2"></div>
+                <div class="gallery-item"><img src="images/Saas Dashboard Series - Orders - S_ Datta.jpg"
+                        alt="Brand Item 3"></div>
+                <div class="gallery-item"><img src="images/Top Digital Marketing Agency in Pakistan.jpg"
+                        alt="Brand Item 4"></div>
+                <div class="gallery-item"><img src="images/Clothing Ad Flyer Design.jpg" alt="Brand Item 5"></div>
+            </div>
+            <div style="margin-top: 2rem; display: flex; justify-content: center;">
+                <a href="https://github.com/alpha-odiero" target="_blank" class="btn btn-primary">View Full Case Study
+                    on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assets Gallery Modal -->
+    <div id="assetsGalleryModal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close">&times;</button>
+            <h2 class="section-title">Digital Marketing Assets</h2>
+            <p>A collection of high-impact visual content created for social media and digital advertising campaigns.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/Top Digital Marketing Agency in Pakistan.jpg"
+                        alt="Marketing Asset 1"></div>
+                <div class="gallery-item"><img src="images/Clothing Ad Flyer Design.jpg" alt="Marketing Asset 2"></div>
+                <div class="gallery-item"><img src="images/Instagram (1).jpg" alt="Marketing Asset 3"></div>
+            </div>
+            <div style="margin-top: 2rem; display: flex; justify-content: center;">
+                <a href="https://github.com/alpha-odiero" target="_blank" class="btn btn-primary">Explore Full
+                    Campaign</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+    <script src="/js/main.js"></script>
+    <script src="/js/animations.js"></script>
+</body>
+
+</html>

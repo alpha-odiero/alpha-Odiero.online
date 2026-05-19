@@ -1,0 +1,165 @@
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-grid, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-image {
+        order: -1;
+        margin: 0 auto;
+    }
+
+    .hero-flow-diagram {
+        display: none;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3.5rem 0;
+    }
+
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .social-connect-wrapper {
+        transform: scale(0.85);
+        transform-origin: left center;
+        margin-left: -10px;
+        text-align: left;
+    }
+
+    .hero-content .social-connect-wrapper {
+        display: inline-block;
+        margin-right: auto;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-card, .contact-form, .project-info {
+        padding: 1.5rem !important;
+    }
+
+    .modal-content {
+        padding: 2rem;
+    }
+
+    .services-grid, .projects-grid, .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-flow-diagram {
+        display: none;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .bot-window {
+        width: 90vw;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: 20px;
+    }
+
+    .whatsapp-bot .bot-toggle {
+        display: none;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer-about p {
+        margin: 0 auto;
+    }
+
+    .footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-links .social-icons {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+}
