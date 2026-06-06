@@ -309,6 +309,7 @@ h4 {
 
 .hero-content {
     max-width: 700px;
+    transform: translateZ(0);
 }
 
 .hero-nickname {
@@ -351,22 +352,34 @@ h4 {
     margin-bottom: 3rem;
 }
 
-.btn {
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition-smooth);
-    cursor: pointer;
-    border: none;
-    font-family: var(--font-body);
-}
+button,
+    .btn,
+    .nav-contact-btn,
+    .filter-btn,
+    .card-action-btn,
+    .page-back-btn,
+    .modal-close,
+    .theme-toggle,
+    .menu-close {
+        border-radius: 0 !important;
+    }
 
-.btn-primary {
-    background: var(--dark-navy);
-    color: white;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+    .btn {
+        padding: 14px 28px;
+        border-radius: 0;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition-smooth);
+        cursor: pointer;
+        border: none;
+        font-family: var(--font-body);
+    }
+
+    .btn-primary {
+        background: var(--dark-navy);
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
 
 .btn-primary:hover {
     transform: translateY(-2px);
@@ -423,28 +436,35 @@ h4 {
 }
 
 .connect-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 6px;
+    font-size: 1.05rem;
+    font-weight: 800; /* bolder */
+    margin-bottom: 4px;
     text-align: center;
 }
 
 .connect-text-sub {
-    font-size: 0.95rem;
+    font-size: 0. ninerem;
     font-weight: 400;
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 6px;
     text-align: center;
 }
 
-.hero .social-icons {
+    .hero .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.9rem; /* tighten icons */
     flex-wrap: wrap;
     padding-top: 0;
     padding-bottom: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+}
+
+.social-follow-text {
+    font-size: 0. ninerem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    text-align: center;
 }
 
 i[data-lucide], i.fa-solid, i.fa-brands, i.fa-regular {
@@ -1629,11 +1649,18 @@ footer {
     background: white;
     width: 100%;
     max-width: 600px;
-    border-radius: 24px;
+    border-radius: 0;
     padding: 3rem;
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .modal-content.modal-large {
@@ -1917,6 +1944,14 @@ footer {
     transform: translateY(0);
 }
 
+.typing-text {
+    display: inline-block;
+    min-width: 500px;
+    min-height: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .typing-text::after {
     content: '|';
     animation: blink 0.8s infinite;
@@ -1925,6 +1960,48 @@ footer {
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+/* Responsive fixes: prevent horizontal scroll on small screens caused by typing width */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    /* Stack the highlight and typing text on mobile: 'Building' above, typed text below */
+    .hero-title .hero-highlight {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .hero-title .typing-text {
+        display: block;
+        margin-top: 0;
+    }
+
+    /* Remove reserved vertical space for typing text on mobile (revert) */
+    .typing-text {
+        display: inline-block;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+        overflow: hidden;
+        word-break: break-word;
+        min-height: 0 !important;
+        margin-bottom: 0 !important;
+        vertical-align: baseline;
+    }
+
+    .social-connect-wrapper {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
@@ -2162,6 +2239,7 @@ footer {
 .map-bg {
     position: relative;
     z-index: 1;
+    overflow: hidden;
     /* Ensure section content stays above the background */
 }
 
@@ -2178,6 +2256,8 @@ footer {
     z-index: -1;
     pointer-events: none;
     opacity: var(--map-opacity);
+    transform: translateZ(0);
+    will-change: transform, opacity, background-position;
 }
 
 .map-bg-world::before {
