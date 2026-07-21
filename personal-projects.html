@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Projects | Alpha Odiero</title>
+    <meta name="description" content="Personal visual projects by Alpha Odiero.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        (function () {
+            let savedTheme = null;
+            try {
+                savedTheme = localStorage.getItem('theme');
+            } catch (error) {}
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        })();
+    </script>
+</head>
+
+<body class="personal-page">
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/ligh logo.png" alt="Alpha Odiero" class="logo-light">
+                <img src="images/dark logo.png" alt="Alpha Odiero" class="logo-dark">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-contact-btn">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <i data-lucide="sun" class="theme-icon theme-icon-sun"></i>
+                    <i data-lucide="moon" class="theme-icon theme-icon-moon"></i>
+                </button>
+                <a href="index.html#projects" class="btn btn-outline page-back-btn">Back</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="personal-page-header">
+            <div class="container personal-page-top">
+                <h1 class="personal-page-title">Personal Projects</h1>
+            </div>
+        </header>
+
+        <section class="personal-gallery-section">
+            <div class="container personal-image-grid">
+                <img src="images/Birthday flyer design.jpg" alt="Personal project">
+                <img src="images/File gốc PSD Poster báo giá dịch vụ gói du lịch nghỉ dưỡng S99_VN.jpg" alt="Personal project">
+                <img src="images/Fulfil your safari dreams with our Kenya Safari Package! 🌍🐆.jpg" alt="Personal project">
+                <img src="images/Customer Service Week Flyer.jpg" alt="Personal project">
+                <img src="images/Magazine Cover Design.jpg" alt="Personal project">
+                <img src="images/product.jpg" alt="Personal project">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
