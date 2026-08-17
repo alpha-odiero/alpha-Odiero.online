@@ -2678,3 +2678,29 @@ footer {
     z-index: -1;
     pointer-events: none;
 }
+
+/* WhatsApp Contact Card */
+.whatsapp-card .card-front .contact-icon {
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.whatsapp-card:hover .card-front .contact-icon {
+    background: rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-btn {
+    background: rgba(37, 211, 102, 0.08) !important;
+    border-color: rgba(37, 211, 102, 0.15) !important;
+}
+
+.whatsapp-btn:hover {
+    background: #25D366 !important;
+    color: white !important;
+    border-color: #25D366 !important;
+    box-shadow: 0 12px 24px rgba(37, 211, 102, 0.25) !important;
+}
+
+.whatsapp-btn:hover i,
+.whatsapp-btn:hover svg {
+    color: white !important;
+}

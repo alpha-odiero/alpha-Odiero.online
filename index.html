@@ -628,6 +628,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="interactive-contact-card whatsapp-card">
+                        <div class="card-front" onclick="this.parentElement.classList.add('show-back')">
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.8rem;"></i></div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>Chat with me directly</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-header">
+                                <button class="card-back-btn" onclick="this.closest('.interactive-contact-card').classList.remove('show-back'); event.stopPropagation();"><i class="fa-solid fa-arrow-left"></i></button>
+                                <h4>Let's Chat</h4>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://wa.me/254715519158?text=Hello%20Alpha,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" class="card-action-btn whatsapp-btn"><i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Start Chat</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="contact-form reveal">

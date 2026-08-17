@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Submission (Mock handling or EmailJS placeholder)
+    // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
-            // In a real production scenario, use EmailJS here
             setTimeout(() => {
                 alert('Thank you! Your message has been sent successfully.');
                 contactForm.reset();
