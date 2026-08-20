@@ -2071,11 +2071,13 @@ footer > * {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
     padding: 1.5rem 0;
     font-size: 0.82rem;
     opacity: 0.5;
+    text-align: center;
 }
 
 .back-to-top {
@@ -2718,8 +2720,8 @@ footer > * {
     border-color: rgba(226, 232, 240, 0.2);
 }
 
-:root[data-theme="dark"] footer {
-    background: #020617;
+:root[data-theme="dark"] footer::before {
+    background: rgba(2, 6, 23, 0.9);
 }
 
 /* Map Backgrounds */
