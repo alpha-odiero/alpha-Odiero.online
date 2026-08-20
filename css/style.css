@@ -2444,11 +2444,6 @@ footer {
 
 /* Responsive fixes: prevent horizontal scroll on small screens caused by typing width */
 @media (max-width: 768px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
     .hero-title {
         font-size: 2.2rem;
         margin-bottom: 12px;
