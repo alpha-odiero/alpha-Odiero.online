@@ -161,6 +161,10 @@
         display: none;
     }
 
+    .about-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .about-stats-mobile {
         display: flex;
         position: absolute;
@@ -317,6 +321,10 @@
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
+    }
+
+    .about-capabilities {
+        grid-template-columns: 1fr;
     }
 
     .logo img {
