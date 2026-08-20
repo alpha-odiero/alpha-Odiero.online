@@ -1906,10 +1906,24 @@ section {
 
 /* Footer */
 footer {
-    background: #020617;
+    background: url('../images/footer.jpg') center/cover no-repeat;
     color: white;
     padding: 5rem 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.85);
+    z-index: 0;
+}
+
+footer > * {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-top {
