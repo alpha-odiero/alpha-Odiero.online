@@ -817,7 +817,7 @@ section {
 .about-capabilities {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+    gap: 1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -825,29 +825,62 @@ section {
 .about-capability {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    background: var(--bg-soft);
-    border: 1px solid var(--border-color);
+    gap: 12px;
+    padding: 1.1rem 1.25rem;
+    background: transparent;
+    border: 1px solid #d4d4d8;
     border-radius: 10px;
-    font-size: 0.82rem;
-    font-weight: 500;
+    font-size: 0.88rem;
+    font-weight: 600;
     color: var(--heading-color);
-    transition: var(--transition-smooth);
-}
-
-.about-capability i {
-    color: var(--accent-orange);
-    font-size: 0.95rem;
-    width: 20px;
-    text-align: center;
-    flex-shrink: 0;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Sora', 'Inter', sans-serif;
 }
 
 .about-capability:hover {
     border-color: var(--accent-orange);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.08);
+}
+
+.about-capability-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(234, 88, 12, 0.08);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-orange);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.about-capability:hover .about-capability-icon {
+    transform: scale(1.08);
+}
+
+.about-capability-icon i {
+    font-size: 1rem;
+    width: auto;
+    text-align: center;
+    flex-shrink: 0;
+    color: var(--accent-orange);
+}
+
+.about-capability span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    letter-spacing: 0.01em;
+}
+
+:root[data-theme="dark"] .about-capability {
+    border-color: #3f3f46;
+}
+
+:root[data-theme="dark"] .about-capability:hover {
+    border-color: var(--accent-orange);
 }
 
 /* Services */
@@ -3702,5 +3735,21 @@ footer > * {
 
     .btn-outline-sm {
         justify-content: center;
+    }
+
+    .about-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid-outlined,
+    .skills-grid-clean {
+        grid-template-columns: 1fr;
     }
 }

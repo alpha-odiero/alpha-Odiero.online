@@ -37,6 +37,10 @@
     .footer-top {
         grid-template-columns: 1fr 1fr;
     }
+
+    .about-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -140,6 +144,10 @@
         font-size: 1.5rem;
     }
 
+    .section-head {
+        margin-bottom: 2.5rem;
+    }
+
     .hero-subtitle {
         font-size: 0.95rem;
     }
@@ -163,6 +171,26 @@
 
     .about-capabilities {
         grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .about-capability {
+        padding: 0.9rem 1rem;
+        gap: 10px;
+    }
+
+    .about-capability-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .about-capability-icon i {
+        font-size: 0.9rem;
+    }
+
+    .about-capability span {
+        font-size: 0.8rem;
     }
 
     .about-stats-mobile {
@@ -316,15 +344,41 @@
     .project-detail-grid {
         grid-template-columns: 1fr;
     }
+
+    .section-light {
+        padding: 5rem 0;
+    }
+
+    .premium-section-inner {
+        padding: 0;
+    }
+
+    .section-heading-premium {
+        margin-bottom: 2.5rem;
+    }
+
+    .heading-gray,
+    .heading-black {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
 
     .about-capabilities {
         grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .about-capability {
+        padding: 0.85rem 1rem;
     }
 
     .logo img {
@@ -373,6 +427,28 @@
 
     .scroll-cue {
         font-size: 1.2rem;
+    }
+
+    .heading-gray,
+    .heading-black {
+        font-size: 1.5rem;
+    }
+
+    .section-light {
+        padding: 4rem 0;
+    }
+
+    .premium-section-inner {
+        padding: 0;
+    }
+
+    .service-card-outlined,
+    .skill-category-clean {
+        padding: 1.25rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
     }
 }
 
