@@ -1917,7 +1917,7 @@ footer::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(2, 6, 23, 0.85);
+    background: rgba(2, 6, 23, 0.75);
     z-index: 0;
 }
 
@@ -2070,14 +2070,18 @@ footer > * {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    position: relative;
+    text-align: center;
     padding: 1.5rem 0;
     font-size: 0.82rem;
     opacity: 0.5;
-    text-align: center;
+}
+
+.footer-bottom .back-to-top {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .back-to-top {
@@ -2721,7 +2725,7 @@ footer > * {
 }
 
 :root[data-theme="dark"] footer::before {
-    background: rgba(2, 6, 23, 0.9);
+    background: rgba(2, 6, 23, 0.7);
 }
 
 /* Map Backgrounds */
