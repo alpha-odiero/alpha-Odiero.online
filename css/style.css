@@ -2876,6 +2876,11 @@ footer {
     gap: 1.5rem;
 }
 
+/* Center lone card in last row */
+.skills-grid-clean > :last-child:nth-child(3n+1) {
+    grid-column: 2;
+}
+
 .skill-category-clean {
     background: transparent;
     border: 1px solid #d4d4d8;
@@ -2952,6 +2957,14 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+}
+
+/* Center 2 lone cards in last row */
+.projects-grid-clean > :nth-last-child(2) {
+    grid-column: 1;
+}
+.projects-grid-clean > :last-child {
+    grid-column: 3;
 }
 
 .project-card-clean {
