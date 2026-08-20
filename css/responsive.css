@@ -447,6 +447,35 @@
         padding: 1.25rem;
     }
 
+    .skills-grid-clean {
+        gap: 1rem;
+    }
+
+    .skill-category-clean h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--accent-orange);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .skill-category-clean ul {
+        gap: 0.4rem;
+    }
+
+    .skill-category-clean li {
+        font-size: 0.85rem;
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    .skill-category-clean:hover {
+        transform: translateY(-3px);
+    }
+
     .modal-content {
         padding: 1.5rem;
     }
