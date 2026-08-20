@@ -930,8 +930,9 @@ section {
 .premium-tech-grid .premium-light-card:nth-child(2)::before { background: #68a063; }
 .premium-tech-grid .premium-light-card:nth-child(3)::before { background: #336791; }
 .premium-tech-grid .premium-light-card:nth-child(4)::before { background: #2496ed; }
-.premium-tech-grid .premium-light-card:nth-child(5)::before { background: #a259ff; }
-.premium-tech-grid .premium-light-card:nth-child(6)::before { background: #ef4444; }
+.premium-tech-grid .premium-light-card:nth-child(5)::before { background: #ef4444; }
+.premium-tech-grid .premium-light-card:nth-child(6)::before { background: #8b5cf6; }
+.premium-tech-grid .premium-light-card:nth-child(7)::before { background: #ea580c; }
 
 .premium-tech-grid .premium-light-card:hover::before {
     opacity: 0.12;
@@ -950,7 +951,8 @@ section {
 .premium-tech-grid .premium-light-card:nth-child(3) .premium-light-icon { background: #ede7f6; color: #5e35b1; }
 .premium-tech-grid .premium-light-card:nth-child(4) .premium-light-icon { background: #e3f2fd; color: #1565c0; }
 .premium-tech-grid .premium-light-card:nth-child(5) .premium-light-icon { background: #fce4ec; color: #c62828; }
-.premium-tech-grid .premium-light-card:nth-child(6) .premium-light-icon { background: #fff3e0; color: #e65100; }
+.premium-tech-grid .premium-light-card:nth-child(6) .premium-light-icon { background: #f3e8ff; color: #7c3aed; }
+.premium-tech-grid .premium-light-card:nth-child(7) .premium-light-icon { background: #fff7ed; color: #ea580c; }
 
 .premium-tech-grid .premium-light-icon i,
 .premium-tech-grid .premium-light-icon svg {
@@ -992,8 +994,13 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.premium-tech-tags span:hover i {
+    .premium-tech-tags span:hover i {
     opacity: 1;
+}
+
+/* Wide skill card - spans full grid width */
+.skill-card-wide {
+    grid-column: 1 / -1;
 }
 
 /* Orange Card Variant */
@@ -1051,6 +1058,9 @@ section {
     .premium-light-grid,
     .premium-tech-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .skill-card-wide {
+        grid-column: 1 / -1;
     }
 }
 
@@ -1144,7 +1154,8 @@ section {
 :root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(3) .premium-light-icon { background: #3b0764; color: #c084fc; }
 :root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(4) .premium-light-icon { background: #1e3a5f; color: #60a5fa; }
 :root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(5) .premium-light-icon { background: #4c0519; color: #fb7185; }
-:root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(6) .premium-light-icon { background: #431407; color: #fb923c; }
+:root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(6) .premium-light-icon { background: #2e1065; color: #a78bfa; }
+:root[data-theme="dark"] .premium-tech-grid .premium-light-card:nth-child(7) .premium-light-icon { background: #431407; color: #fb923c; }
 
 :root[data-theme="dark"] .premium-light-card h3,
 :root[data-theme="dark"] .premium-light-card h4 {
