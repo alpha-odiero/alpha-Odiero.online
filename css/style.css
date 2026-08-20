@@ -594,7 +594,7 @@ i[data-lucide]:hover, i.fa-solid:hover, i.fa-brands:hover, i.fa-regular:hover {
 }
 
 .hero-logo {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     width: 100%;
 }
