@@ -332,88 +332,26 @@
     <section id="skills" class="section-light section-light-alt">
         <div class="container premium-section-inner">
             <div class="section-head reveal">
-                <h2 class="section-heading-premium"><span class="heading-gray">Technical Skills</span><span class="heading-black">Across the Full Stack.</span></h2>
+                <h2 class="section-heading-premium"><span class="heading-gray">Technical Skills</span><span class="heading-black">Across the <em class="italic-serif">Full Stack.</em></span></h2>
                 <p class="section-head-desc">A curated set of technologies, frameworks, and tools I use to build reliable, scalable, and production-ready software.</p>
             </div>
-            <div class="skills-container skills-grid-clean">
-                <div class="skill-category-clean reveal">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Responsive Design</li>
-                        <li>UI/UX Implementation</li>
-                    </ul>
+            <div class="skills-carousel-wrapper" tabindex="0" role="region" aria-label="Technical Skills Carousel">
+                <div class="skills-carousel-nav">
+                    <button class="skills-arrow skills-prev" aria-label="Previous skill category">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="skills-carousel-viewport">
+                        <div class="skills-carousel-track"></div>
+                    </div>
+                    <button class="skills-arrow skills-next" aria-label="Next skill category">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                 </div>
-                <div class="skill-category-clean reveal">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Python</li>
-                        <li>FastAPI</li>
-                        <li>REST API Development</li>
-                        <li>API Architecture</li>
-                    </ul>
+                <div class="skills-active-panel">
+                    <h3 class="skills-panel-title"></h3>
+                    <div class="skills-panel-grid"></div>
                 </div>
-                <div class="skill-category-clean reveal">
-                    <h4>Databases</h4>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>SQLite3</li>
-                        <li>MongoDB</li>
-                        <li>Prisma</li>
-                        <li>SQLAlchemy</li>
-                        <li>Database Design &amp; ERD</li>
-                    </ul>
-                </div>
-                <div class="skill-category-clean reveal">
-                    <h4>DevOps &amp; Cloud</h4>
-                    <ul>
-                        <li>Git &amp; GitHub</li>
-                        <li>Linux &amp; CLI</li>
-                        <li>Vercel</li>
-                        <li>Netlify</li>
-                        <li>Render</li>
-                        <li>AWS</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </div>
-                <div class="skill-category-clean reveal">
-                    <h4>Cybersecurity</h4>
-                    <ul>
-                        <li>Authentication &amp; Authorization</li>
-                        <li>Data Encryption</li>
-                        <li>Secure Coding Practices</li>
-                        <li>Network Security Basics</li>
-                    </ul>
-                </div>
-                <div class="skill-category-clean reveal">
-                    <h4>Software Architecture</h4>
-                    <ul>
-                        <li>Full-Stack Architecture</li>
-                        <li>RESTful Architecture</li>
-                        <li>Database Architecture</li>
-                        <li>Scalable Application Design</li>
-                        <li>Third-Party API Integration</li>
-                        <li>Cloud-based Architecture</li>
-                    </ul>
-                </div>
-                <div class="skill-category-clean reveal">
-                    <h4>AI &amp; Automation</h4>
-                    <ul>
-                        <li>OpenAI API</li>
-                        <li>LangChain</li>
-                        <li>Python Automation</li>
-                        <li>Workflow Automation</li>
-                        <li>Web Scraping</li>
-                    </ul>
-                </div>
+                <div class="skills-dots" role="tablist" aria-label="Skill categories"></div>
             </div>
         </div>
     </section>
@@ -1292,6 +1230,7 @@
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/project-carousel.js"></script>
+    <script src="./js/skills-carousel.js"></script>
     <script src="./js/cookie-consent.js"></script>
     <script src="./js/cookie-consent-ui.js"></script>
 </body>

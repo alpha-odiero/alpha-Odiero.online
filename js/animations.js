@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal, .skill-card, .service-card, .project-card').forEach(el => {
+    document.querySelectorAll('.reveal, .service-card, .project-card').forEach(el => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });

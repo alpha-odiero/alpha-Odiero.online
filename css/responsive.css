@@ -170,13 +170,16 @@
     }
 
     .about-capabilities {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0.75rem;
     }
 
     .about-capability {
         padding: 0.9rem 1rem;
         gap: 10px;
+        width: calc(50% - 0.375rem);
     }
 
     .about-capability-icon {
@@ -373,7 +376,9 @@
     }
 
     .about-capabilities {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0.6rem;
     }
 
