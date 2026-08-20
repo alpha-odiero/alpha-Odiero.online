@@ -1950,7 +1950,7 @@ footer::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(2, 6, 23, 0.75);
+    background: rgba(2, 6, 23, 0.88);
     z-index: 0;
 }
 
