@@ -189,7 +189,7 @@ h4 {
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: var(--transition-smooth);
     white-space: nowrap;
 }
@@ -407,18 +407,14 @@ h4 {
 button,
     .btn,
     .nav-contact-btn,
-    .filter-btn,
     .card-action-btn,
-    .page-back-btn,
-    .modal-close,
-    .theme-toggle,
-    .menu-close {
-        border-radius: 0 !important;
+    .page-back-btn {
+        border-radius: 10px !important;
     }
 
     .btn {
         padding: 14px 28px;
-        border-radius: 0;
+        border-radius: 10px;
         font-weight: 600;
         text-decoration: none;
         transition: var(--transition-smooth);
