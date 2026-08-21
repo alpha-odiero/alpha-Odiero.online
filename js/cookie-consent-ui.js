@@ -2,26 +2,29 @@
  * Cookie Consent UI - Banner & Preferences Modal
  */
 document.addEventListener('DOMContentLoaded', function () {
-    if (CookieConsent.hasConsent()) return;
-
+    var needsBanner = !CookieConsent.hasConsent();
     var consent = CookieConsent.get() || CookieConsent.getDefault();
+    var banner = null;
 
-    // Create banner
-    var banner = document.createElement('div');
-    banner.className = 'cc-banner';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', 'Cookie Consent');
-    banner.innerHTML = '<div class="cc-banner-inner">' +
-        '<div class="cc-banner-text">' +
-            '<p class="cc-banner-title">We value your privacy</p>' +
-            '<p class="cc-banner-desc">We use cookies and browser storage to improve your experience, analyze site traffic, and support marketing efforts. Choose how you\'d like to proceed.</p>' +
-        '</div>' +
-        '<div class="cc-banner-actions">' +
-            '<button class="cc-btn cc-btn-accept" type="button">Accept All</button>' +
-            '<button class="cc-btn cc-btn-reject" type="button">Reject All</button>' +
-            '<button class="cc-btn cc-btn-manage" type="button">Manage Preferences</button>' +
-        '</div>' +
-    '</div>';
+    // Create banner (only when no consent decision has been made yet)
+    if (needsBanner) {
+        banner = document.createElement('div');
+        banner.className = 'cc-banner';
+        banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-label', 'Cookie Consent');
+        banner.innerHTML = '<div class="cc-banner-inner">' +
+            '<div class="cc-banner-text">' +
+                '<p class="cc-banner-title">We value your privacy</p>' +
+                '<p class="cc-banner-desc">We use cookies and browser storage to improve your experience, analyze site traffic, and support marketing efforts. Choose how you\'d like to proceed.</p>' +
+            '</div>' +
+            '<div class="cc-banner-actions">' +
+                '<button class="cc-btn cc-btn-accept" type="button">Accept All</button>' +
+                '<button class="cc-btn cc-btn-reject" type="button">Reject All</button>' +
+                '<button class="cc-btn cc-btn-manage" type="button">Manage Preferences</button>' +
+            '</div>' +
+        '</div>';
+        document.body.appendChild(banner);
+    }
 
     // Create preferences modal
     var modal = document.createElement('div');
@@ -64,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
         '</div>' +
     '</div>';
 
-    document.body.appendChild(banner);
     document.body.appendChild(modal);
 
     // Focus management
@@ -87,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function hideBanner() {
+        if (!banner) return;
         banner.classList.add('cc-hidden');
         setTimeout(function () { banner.remove(); }, 400);
     }
@@ -103,21 +106,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Banner button handlers
-    banner.querySelector('.cc-btn-accept').addEventListener('click', function () {
-        var c = CookieConsent.acceptAll();
-        applyConsent(c);
-        hideBanner();
-    });
+    if (banner) {
+        banner.querySelector('.cc-btn-accept').addEventListener('click', function () {
+            var c = CookieConsent.acceptAll();
+            applyConsent(c);
+            hideBanner();
+        });
 
-    banner.querySelector('.cc-btn-reject').addEventListener('click', function () {
-        var c = CookieConsent.rejectAll();
-        applyConsent(c);
-        hideBanner();
-    });
+        banner.querySelector('.cc-btn-reject').addEventListener('click', function () {
+            var c = CookieConsent.rejectAll();
+            applyConsent(c);
+            hideBanner();
+        });
 
-    banner.querySelector('.cc-btn-manage').addEventListener('click', function () {
-        openPreferences();
-    });
+        banner.querySelector('.cc-btn-manage').addEventListener('click', function () {
+            openPreferences();
+        });
+    }
 
     // Modal close
     modal.querySelector('.cc-modal-close').addEventListener('click', function () {
@@ -162,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (CookieConsent.hasConsent()) {
                 openPreferences();
-            } else {
+            } else if (banner) {
                 banner.classList.remove('cc-hidden');
             }
         });

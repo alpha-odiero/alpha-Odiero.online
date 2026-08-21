@@ -91,6 +91,14 @@
         display: flex;
     }
 
+    .hero {
+        background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('../images/fri.jpg') center/cover no-repeat;
+    }
+
+    :root[data-theme="dark"] .hero {
+        background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.88)), url('../images/fri.jpg') center/cover no-repeat;
+    }
+
     .hero-title {
         font-size: 1.8rem;
     }
