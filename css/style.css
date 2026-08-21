@@ -2300,6 +2300,12 @@ footer > * {
     border-color: rgba(247, 223, 30, 0.34);
 }
 
+.project-detail-tags .stack-react {
+    color: #149eca;
+    background: rgba(97, 218, 251, 0.12);
+    border-color: rgba(97, 218, 251, 0.3);
+}
+
 .project-detail-tags .stack-node,
 .project-detail-tags .stack-mongo {
     color: #3c873a;
@@ -2309,7 +2315,8 @@ footer > * {
 
 .project-detail-tags .stack-express,
 .project-detail-tags .stack-jwt,
-.project-detail-tags .stack-vercel {
+.project-detail-tags .stack-vercel,
+.project-detail-tags .stack-github {
     color: #111827;
     background: rgba(17, 24, 39, 0.08);
     border-color: rgba(17, 24, 39, 0.18);
@@ -2764,7 +2771,8 @@ footer > * {
 
 :root[data-theme="dark"] .project-detail-tags .stack-express,
 :root[data-theme="dark"] .project-detail-tags .stack-jwt,
-:root[data-theme="dark"] .project-detail-tags .stack-vercel {
+:root[data-theme="dark"] .project-detail-tags .stack-vercel,
+:root[data-theme="dark"] .project-detail-tags .stack-github {
     color: #e5e7eb;
     background: rgba(226, 232, 240, 0.1);
     border-color: rgba(226, 232, 240, 0.2);
