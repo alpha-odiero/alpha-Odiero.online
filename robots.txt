@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alpha-odiero-online.vercel.app/sitemap.xml
+Sitemap: https://alpha-odiero.online/sitemap.xml
