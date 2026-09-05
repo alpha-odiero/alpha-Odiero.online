@@ -390,6 +390,12 @@ h4 {
     color: var(--accent-orange);
 }
 
+.hero-engineer {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
 .hero-subtitle {
     font-size: 1.2rem;
     /* Increase font size for better readability */
