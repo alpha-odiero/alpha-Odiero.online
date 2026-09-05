@@ -387,7 +387,9 @@ h4 {
 }
 
 .hero-highlight {
-    color: var(--accent-orange);
+    color: var(--text-primary);
+    font-weight: 700;
+    display: block;
 }
 
 .hero-engineer {
