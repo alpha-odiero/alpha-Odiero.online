@@ -580,6 +580,28 @@ i[data-lucide]:hover, i.fa-solid:hover, i.fa-brands:hover, i.fa-regular:hover {
     background: linear-gradient(45deg, #f09433, #e6683c, #bc1888, #cc2366);
 }
 
+.social-icon.sessionize {
+    color: white;
+    background: #1ab394;
+}
+
+.social-icon.sessionize svg {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+.social-icon i,
+.social-icon svg {
+    transition: var(--transition-smooth);
+    width: 1em;
+    height: 1em;
+}
+
+.social-icon:hover i,
+.social-icon:hover svg {
+    transform: scale(1.15);
+}
+
 .social-icon:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
