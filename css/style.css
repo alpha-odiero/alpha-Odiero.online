@@ -327,19 +327,20 @@ h4 {
 }
 
 .nav-contact-btn {
-    background: var(--heading-color);
-    color: var(--primary-white) !important;
+    background: transparent;
+    color: var(--text-primary) !important;
     padding: 8px 22px;
     border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: 600;
+    border: 1px solid var(--border-color);
 }
 
 .nav-contact-btn:hover {
-    background: var(--accent-orange);
-    color: #fff !important;
+    background: var(--text-primary);
+    color: var(--primary-white) !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3);
+    box-shadow: none;
 }
 
 /* Hero Section */
