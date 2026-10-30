@@ -26,20 +26,20 @@
 }
 
 :root[data-theme="dark"] {
-    color-scheme: light;
-    --primary-white: #ffffff;
-    --dark-navy: #000000;
-    --text-primary: #000000;
-    --text-secondary: #000000;
-    --bg-soft: #ffffff;
-    --border-color: #000000;
-    --surface: #ffffff;
-    --surface-elevated: #ffffff;
-    --surface-muted: #ffffff;
-    --heading-color: #000000;
-    --navbar-bg: #ffffff;
-    --input-bg: #ffffff;
-    --soft-border: #000000;
+    color-scheme: dark;
+    --primary-white: #000000;
+    --dark-navy: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --bg-soft: #000000;
+    --border-color: #ffffff;
+    --surface: #000000;
+    --surface-elevated: #000000;
+    --surface-muted: #000000;
+    --heading-color: #ffffff;
+    --navbar-bg: #000000;
+    --input-bg: #000000;
+    --soft-border: #ffffff;
     --shadow-soft: none;
     --shadow-strong: none;
     --map-opacity: 0.05;
@@ -432,29 +432,29 @@ button,
     }
 
 .btn-primary {
-    background: #000000;
-    color: #ffffff;
+    background: var(--text-primary);
+    color: var(--primary-white);
     box-shadow: none;
-    border: 1px solid #000000;
+    border: 1px solid var(--border-color);
 }
 
 .btn-primary:hover {
-    background: #ffffff;
-    color: #000000;
+    background: var(--primary-white);
+    color: var(--text-primary);
     transform: translateY(-2px);
     box-shadow: none;
 }
 
 .btn-outline {
     background: transparent;
-    border: 1px solid #000000;
-    color: #000000;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
 }
 
 .btn-outline:hover {
-    background: #000000;
-    border-color: #000000;
-    color: #ffffff;
+    background: var(--text-primary);
+    border-color: var(--border-color);
+    color: var(--primary-white);
 }
 
 .social-icons {
@@ -3485,7 +3485,7 @@ footer > * {
 /* The Card */
 .showcase-card {
     background: var(--surface, #ffffff);
-    border: 1px solid #000000;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -3494,14 +3494,26 @@ footer > * {
     flex-direction: column;
 }
 
+:root[data-theme="dark"] .showcase-card {
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.05);
+}
+
 .showcase-slide.is-active .showcase-card {
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px #000000;
-    border-color: #000000;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--border-color);
+    border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .showcase-slide.is-active .showcase-card {
+    box-shadow: 0 40px 80px rgba(255, 255, 255, 0.08), 0 0 0 1px var(--border-color);
 }
 
 .showcase-slide.is-active .showcase-card:hover {
-    box-shadow: 0 50px 90px rgba(0, 0, 0, 0.35), 0 0 0 1px #000000;
+    box-shadow: 0 50px 90px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border-color);
     transform: translateY(-6px);
+}
+
+:root[data-theme="dark"] .showcase-slide.is-active .showcase-card:hover {
+    box-shadow: 0 50px 90px rgba(255, 255, 255, 0.12), 0 0 0 1px var(--border-color);
 }
 
 /* Card Image */
@@ -3606,17 +3618,29 @@ footer > * {
     font-size: 0.78rem;
     font-weight: 600;
     text-decoration: none;
-    border: 1px solid #000000;
-    color: #ffffff;
-    background: #000000;
+    border: 1px solid var(--border-color);
+    color: var(--primary-white);
+    background: var(--text-primary);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .showcase-btn:hover {
-    border-color: #000000;
-    color: #000000;
-    background: #ffffff;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    background: var(--primary-white);
+}
+
+.showcase-btn-ghost {
+    background: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.showcase-btn-ghost:hover {
+    background: var(--text-primary);
+    border-color: var(--border-color);
+    color: var(--primary-white);
 }
 
 .showcase-btn i,
@@ -3633,14 +3657,14 @@ footer > * {
 
 .showcase-btn-ghost {
     background: transparent;
-    border-color: #000000;
-    color: #000000;
+    border-color: var(--border-color);
+    color: var(--text-primary);
 }
 
 .showcase-btn-ghost:hover {
-    background: #000000;
-    border-color: #000000;
-    color: #ffffff;
+    background: var(--text-primary);
+    border-color: var(--border-color);
+    color: var(--primary-white);
 }
 
 /* Arrows */
@@ -3651,9 +3675,9 @@ footer > * {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 1px solid #000000;
-    background: #ffffff;
-    color: #000000;
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3664,12 +3688,20 @@ footer > * {
     font-size: 1rem;
 }
 
+:root[data-theme="dark"] .showcase-arrow {
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
 .showcase-arrow:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
+    background: var(--text-primary);
+    color: var(--primary-white);
+    border-color: var(--border-color);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     transform: translateY(-50%) scale(1.05);
+}
+
+:root[data-theme="dark"] .showcase-arrow:hover {
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.1);
 }
 
 .showcase-prev {
