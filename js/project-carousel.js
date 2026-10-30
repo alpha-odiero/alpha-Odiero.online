@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let autoScrollTimer = null;
     let userInteracted = false;
+    let isAutoScrolling = false;
 
     function getSlideWidth() {
         const first = track.querySelector('.showcase-slide');
@@ -86,12 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isAnimating) return;
         const total = filteredSlides.length;
         if (total === 0) return;
-        if (index < 0) index = total - 1;
-        if (index >= total) index = 0;
+        if (index < 0) index = (index % total + total) % total;
+        if (index >= total) index = index % total;
         currentIndex = index;
         isAnimating = true;
         render();
-        setTimeout(() => { isAnimating = false; }, 450);
+        setTimeout(() => { isAnimating = false; }, 550);
     }
 
     function goNext() { goTo(currentIndex + 1); }
@@ -99,12 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startAutoScroll() {
         stopAutoScroll();
+        if (filteredSlides.length <= 1) return;
+        isAutoScrolling = true;
         autoScrollTimer = setInterval(() => {
-            if (userInteracted) return;
-            const total = filteredSlides.length;
-            if (total <= 1) return;
-            goTo(currentIndex + 1);
-        }, 3200);
+            if (userInteracted) {
+                stopAutoScroll();
+                return;
+            }
+            isAnimating = true;
+            currentIndex = (currentIndex + 1) % filteredSlides.length;
+            render();
+            setTimeout(() => { isAnimating = false; }, 650);
+        }, 3800);
     }
 
     function stopAutoScroll() {
@@ -112,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(autoScrollTimer);
             autoScrollTimer = null;
         }
+        isAutoScrolling = false;
     }
 
     function markInteracted() {

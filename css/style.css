@@ -3439,7 +3439,7 @@ footer > * {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
     padding: 1rem 0;
 }
@@ -3449,19 +3449,19 @@ footer > * {
     flex: 0 0 auto;
     width: 340px;
     min-width: 340px;
-    opacity: 0.45;
-    transform: scale(0.88) translateY(12px);
+    opacity: 0.5;
+    transform: scale(0.9) translateY(10px);
     filter: none;
-    transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
-                transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
-                filter 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     pointer-events: none;
     cursor: default;
 }
 
 .showcase-slide.is-secondary {
-    opacity: 0.7;
-    transform: scale(0.92) translateY(6px);
+    opacity: 0.75;
+    transform: scale(0.94) translateY(6px);
     filter: none;
     pointer-events: auto;
     cursor: pointer;
@@ -3469,7 +3469,7 @@ footer > * {
 
 .showcase-slide.is-active {
     opacity: 1;
-    transform: scale(1.04) translateY(0);
+    transform: scale(1.02) translateY(0);
     filter: none;
     pointer-events: auto;
     cursor: default;
