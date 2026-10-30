@@ -183,20 +183,21 @@ h4 {
     display: inline-flex;
     align-items: center;
     padding: 8px 18px;
-    background: var(--accent-orange);
-    color: #fff;
-    font-size: 0.85rem;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.92rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: var(--transition-smooth);
     white-space: nowrap;
+    border: none;
 }
 
 .nav-start-project:hover {
-    opacity: 0.88;
+    background: var(--text-primary);
+    color: var(--primary-white);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3);
 }
 
 .theme-toggle {
