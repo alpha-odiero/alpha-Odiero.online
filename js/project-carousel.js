@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchStartX = 0;
     let touchDeltaX = 0;
     let isDragging = false;
+    let autoScrollTimer = null;
+    let userInteracted = false;
 
     function getSlideWidth() {
         const first = track.querySelector('.showcase-slide');
@@ -95,11 +97,36 @@ document.addEventListener('DOMContentLoaded', () => {
     function goNext() { goTo(currentIndex + 1); }
     function goPrev() { goTo(currentIndex - 1); }
 
-    if (prevBtn) prevBtn.addEventListener('click', goPrev);
-    if (nextBtn) nextBtn.addEventListener('click', goNext);
+    function startAutoScroll() {
+        stopAutoScroll();
+        autoScrollTimer = setInterval(() => {
+            if (userInteracted) return;
+            const total = filteredSlides.length;
+            if (total <= 1) return;
+            goTo(currentIndex + 1);
+        }, 3200);
+    }
+
+    function stopAutoScroll() {
+        if (autoScrollTimer) {
+            clearInterval(autoScrollTimer);
+            autoScrollTimer = null;
+        }
+    }
+
+    function markInteracted() {
+        if (!userInteracted) {
+            userInteracted = true;
+            stopAutoScroll();
+        }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { markInteracted(); goPrev(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { markInteracted(); goNext(); });
 
     // Keyboard navigation
     wrapper.addEventListener('keydown', (e) => {
+        markInteracted();
         if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
         if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
     });
@@ -109,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let wheelTimer = null;
 
     wrapper.addEventListener('wheel', (e) => {
+        markInteracted();
         const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
         if (Math.abs(delta) < 15) return;
         e.preventDefault();
@@ -125,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Touch / swipe
     wrapper.addEventListener('touchstart', (e) => {
+        markInteracted();
         touchStartX = e.touches[0].clientX;
         touchDeltaX = 0;
         isDragging = true;
@@ -146,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Click side cards to navigate
     wrapper.addEventListener('click', (e) => {
+        markInteracted();
         const slide = e.target.closest('.showcase-slide');
         if (!slide || slide.classList.contains('is-active')) return;
         const idx = filteredSlides.indexOf(slide);
@@ -155,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            markInteracted();
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const filter = btn.getAttribute('data-filter');
@@ -166,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = 0;
             buildDots();
             render();
+            startAutoScroll();
         });
     });
 
@@ -179,4 +211,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Init
     buildDots();
     render();
+    startAutoScroll();
 });

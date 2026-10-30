@@ -1941,10 +1941,13 @@ section {
 
 .contact-form {
     background: var(--surface);
-    padding: 2rem;
+    padding: 1.5rem 1.75rem;
     border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    max-width: 520px;
+    width: 100%;
+    margin-left: auto;
 }
 
 .contact-form .btn {
@@ -1956,7 +1959,7 @@ section {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 }
 
 .form-group label {
@@ -1968,7 +1971,7 @@ section {
 
 .form-control {
     width: 100%;
-    padding: 0.65rem 0.85rem;
+    padding: 0.6rem 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     font-family: inherit;
