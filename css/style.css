@@ -3444,8 +3444,8 @@ footer > * {
 /* Each slide wrapper */
 .showcase-slide {
     flex: 0 0 auto;
-    width: 380px;
-    min-width: 380px;
+    width: 340px;
+    min-width: 340px;
     opacity: 0.45;
     transform: scale(0.88) translateY(12px);
     filter: none;
@@ -3466,7 +3466,7 @@ footer > * {
 
 .showcase-slide.is-active {
     opacity: 1;
-    transform: scale(1.08) translateY(0);
+    transform: scale(1.04) translateY(0);
     filter: none;
     pointer-events: auto;
     cursor: default;
@@ -3498,7 +3498,7 @@ footer > * {
 /* Card Image */
 .showcase-card-image {
     position: relative;
-    height: 240px;
+    height: 200px;
     overflow: hidden;
 }
 

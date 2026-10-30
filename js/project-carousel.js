@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSlideWidth() {
         const first = track.querySelector('.showcase-slide');
-        if (!first) return 380;
+        if (!first) return 340;
         return first.offsetWidth;
     }
 
