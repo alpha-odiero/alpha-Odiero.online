@@ -3,48 +3,46 @@
 :root {
     color-scheme: light;
     --primary-white: #ffffff;
-    --dark-navy: #020617;
-    --accent-orange: #ea580c;
-    --accent-emerald: #059669;
-    --text-primary: #020617;
-    --text-secondary: #475569;
-    --bg-soft: #f8fafc;
-    --border-color: #f1f5f9;
+    --dark-navy: #000000;
+    --accent-orange: #000000;
+    --accent-emerald: #000000;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --bg-soft: #ffffff;
+    --border-color: #000000;
     --surface: #ffffff;
-    --surface-elevated: rgba(255, 255, 255, 0.82);
-    --surface-muted: #f8fafc;
-    --heading-color: #020617;
-    --navbar-bg: rgba(255, 255, 255, 0.84);
+    --surface-elevated: #ffffff;
+    --surface-muted: #ffffff;
+    --heading-color: #000000;
     --navbar-bg: #ffffff;
     --input-bg: #ffffff;
-    --soft-border: #e2e8f0;
-    --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.06);
-    --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.1);
+    --soft-border: #000000;
+    --shadow-soft: none;
+    --shadow-strong: none;
     --map-opacity: 0.05;
     --font-heading: 'Sora', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s ease;
 }
 
 :root[data-theme="dark"] {
-    color-scheme: dark;
-    --primary-white: #0b1120;
-    --dark-navy: #f8fafc;
-    --text-primary: #e5e7eb;
-    --text-secondary: #a3adbd;
-    --bg-soft: #111827;
-    --border-color: #243044;
-    --surface: #111827;
-    --surface-elevated: rgba(15, 23, 42, 0.9);
-    --surface-muted: #0f172a;
-    --heading-color: #f8fafc;
-    --navbar-bg: rgba(15, 23, 42, 0.88);
-    --navbar-bg: #111827;
-    --input-bg: #0b1120;
-    --soft-border: #334155;
-    --shadow-soft: 0 20px 48px rgba(0, 0, 0, 0.32);
-    --shadow-strong: 0 30px 70px rgba(0, 0, 0, 0.42);
-    --map-opacity: 0.11;
+    color-scheme: light;
+    --primary-white: #ffffff;
+    --dark-navy: #000000;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --bg-soft: #ffffff;
+    --border-color: #000000;
+    --surface: #ffffff;
+    --surface-elevated: #ffffff;
+    --surface-muted: #ffffff;
+    --heading-color: #000000;
+    --navbar-bg: #ffffff;
+    --input-bg: #ffffff;
+    --soft-border: #000000;
+    --shadow-soft: none;
+    --shadow-strong: none;
+    --map-opacity: 0.05;
 }
 
 * {
