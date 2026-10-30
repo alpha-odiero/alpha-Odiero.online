@@ -431,26 +431,30 @@ button,
         font-family: var(--font-body);
     }
 
-    .btn-primary {
-        background: var(--dark-navy);
-        color: white;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: none;
+    border: 1px solid #000000;
+}
 
 .btn-primary:hover {
+    background: #ffffff;
+    color: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .btn-outline {
     background: transparent;
-    border: 1px solid #e2e8f0;
-    color: var(--dark-navy);
+    border: 1px solid #000000;
+    color: #000000;
 }
 
 .btn-outline:hover {
-    background: var(--bg-soft);
-    border-color: var(--dark-navy);
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
 }
 
 .social-icons {
@@ -3602,11 +3606,17 @@ footer > * {
     font-size: 0.78rem;
     font-weight: 600;
     text-decoration: none;
-    border: 1px solid var(--border-color, #e2e8f0);
-    color: var(--heading-color, #111827);
-    background: var(--bg-soft, #f8fafc);
+    border: 1px solid #000000;
+    color: #ffffff;
+    background: #000000;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+.showcase-btn:hover {
+    border-color: #000000;
+    color: #000000;
+    background: #ffffff;
 }
 
 .showcase-btn i,
@@ -3616,21 +3626,21 @@ footer > * {
 }
 
 .showcase-btn:hover {
-    border-color: var(--accent-orange);
-    color: var(--accent-orange);
-    background: rgba(234, 88, 12, 0.06);
+    border-color: #000000;
+    color: #000000;
+    background: #ffffff;
 }
 
 .showcase-btn-ghost {
     background: transparent;
-    border-color: transparent;
-    color: var(--text-secondary, #6b7280);
+    border-color: #000000;
+    color: #000000;
 }
 
 .showcase-btn-ghost:hover {
-    background: transparent;
-    border-color: var(--accent-orange);
-    color: var(--accent-orange);
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
 }
 
 /* Arrows */
