@@ -333,7 +333,7 @@ h4 {
     border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: 600;
-    border: 1px solid var(--border-color);
+    border: none;
 }
 
 .nav-contact-btn:hover {
