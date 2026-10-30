@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'Databases',
-            skills: ['PostgreSQL', 'MySQL', 'SQLite3', 'MongoDB', 'Prisma', 'SQLAlchemy', 'Database Design & ERD']
+            skills: ['PostgreSQL', 'MySQL', 'SQLite3', 'Prisma', 'SQLAlchemy', 'Database Design & ERD']
         },
         {
             category: 'DevOps & Cloud',
