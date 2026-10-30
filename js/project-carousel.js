@@ -30,7 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return parseFloat(style.gap) || 24;
     }
 
-    function render() {
+    // Continuous smooth infinite scroll
+    function initInfiniteScroll() {
+        if (filteredSlides.length <= 1) return;
+        track.style.transition = 'none';
+        const firstClone = filteredSlides[0].cloneNode(true);
+        const lastClone = filteredSlides[filteredSlides.length - 1].cloneNode(true);
+        firstClone.classList.add('is-clone');
+        lastClone.classList.add('is-clone');
+        track.appendChild(firstClone);
+        track.insertBefore(lastClone, filteredSlides[0]);
+        filteredSlides = Array.from(track.querySelectorAll('.showcase-slide'));
+        currentIndex = 1;
+        render(true);
+    }
+
+    function render(skipTransition) {
         const total = filteredSlides.length;
         if (total === 0) return;
 
@@ -40,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const viewportEl = wrapper.querySelector('.showcase-carousel-viewport');
         const viewportWidth = viewportEl.offsetWidth;
         const centerOffset = (viewportWidth / 2) - (slideWidth / 2);
+
+        if (skipTransition) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 1.2s linear';
+        }
 
         const tx = centerOffset - (currentIndex * itemWidth);
 
@@ -60,58 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDots();
     }
 
-    function buildDots() {
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = '';
-        filteredSlides.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.className = 'showcase-dot' + (i === currentIndex ? ' active' : '');
-            dot.setAttribute('role', 'tab');
-            dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
-            dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
-            dot.addEventListener('click', () => goTo(i));
-            dotsContainer.appendChild(dot);
-        });
-    }
-
-    function updateDots() {
-        if (!dotsContainer) return;
-        const dots = dotsContainer.querySelectorAll('.showcase-dot');
-        dots.forEach((d, i) => {
-            d.classList.toggle('active', i === currentIndex);
-            d.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
-        });
-    }
-
     function goTo(index) {
-        if (isAnimating) return;
         const total = filteredSlides.length;
         if (total === 0) return;
-        if (index < 0) index = (index % total + total) % total;
-        if (index >= total) index = index % total;
-        currentIndex = index;
-        isAnimating = true;
+        currentIndex = ((index % total) + total) % total;
+        track.style.transition = 'transform 1s cubic-bezier(0.25, 0.1, 0.25, 1)';
         render();
-        setTimeout(() => { isAnimating = false; }, 550);
+        handleInfiniteLoop();
     }
 
     function goNext() { goTo(currentIndex + 1); }
     function goPrev() { goTo(currentIndex - 1); }
 
+    function handleInfiniteLoop() {
+        const total = filteredSlides.length;
+        if (total <= 2) return;
+        setTimeout(() => {
+            track.style.transition = 'none';
+            if (currentIndex === total - 1) {
+                currentIndex = 1;
+                render(true);
+            } else if (currentIndex === 0) {
+                currentIndex = total - 2;
+                render(true);
+            }
+        }, 1000);
+    }
+
     function startAutoScroll() {
         stopAutoScroll();
-        if (filteredSlides.length <= 1) return;
+        if (filteredSlides.length <= 2) return;
         isAutoScrolling = true;
         autoScrollTimer = setInterval(() => {
             if (userInteracted) {
                 stopAutoScroll();
                 return;
             }
-            isAnimating = true;
-            currentIndex = (currentIndex + 1) % filteredSlides.length;
+            currentIndex++;
+            track.style.transition = 'transform 1.2s linear';
             render();
-            setTimeout(() => { isAnimating = false; }, 650);
-        }, 3800);
+            handleInfiniteLoop();
+        }, 2000);
     }
 
     function stopAutoScroll() {
@@ -129,14 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (prevBtn) prevBtn.addEventListener('click', () => { markInteracted(); goPrev(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { markInteracted(); goNext(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { markInteracted(); goPrev(); startAutoScroll(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { markInteracted(); goNext(); startAutoScroll(); });
 
     // Keyboard navigation
     wrapper.addEventListener('keydown', (e) => {
         markInteracted();
-        if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
-        if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); startAutoScroll(); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); startAutoScroll(); }
     });
 
     // Mouse wheel — horizontal and vertical
@@ -181,13 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
         touchDeltaX = 0;
     });
 
-    // Click side cards to navigate
     wrapper.addEventListener('click', (e) => {
         markInteracted();
         const slide = e.target.closest('.showcase-slide');
         if (!slide || slide.classList.contains('is-active')) return;
-        const idx = filteredSlides.indexOf(slide);
-        if (idx !== -1) goTo(idx);
+        const slidesArray = Array.from(track.querySelectorAll('.showcase-slide'));
+        const idx = slidesArray.indexOf(slide);
+        if (idx !== -1) { goTo(idx); startAutoScroll(); }
     });
 
     // Filter
@@ -209,15 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Resize handler
-    let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => render(), 120);
     });
 
     // Init
+    initInfiniteScroll();
     buildDots();
-    render();
+    render(true);
     startAutoScroll();
 });
