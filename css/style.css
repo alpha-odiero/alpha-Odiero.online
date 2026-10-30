@@ -1773,9 +1773,11 @@ section {
 /* Contact */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 0.9fr 0.9fr;
+    gap: 1.5rem;
     align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact-info h3 {
