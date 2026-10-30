@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSlideWidth() {
         const first = track.querySelector('.showcase-slide');
-        if (!first) return 340;
+        if (!first) return 380;
         return first.offsetWidth;
     }
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (distance === 0) {
                 slide.classList.add('is-active');
-            } else if (distance <= 1) {
+            } else if (distance === 1) {
                 slide.classList.add('is-secondary');
             }
         });

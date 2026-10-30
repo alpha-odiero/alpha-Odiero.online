@@ -3411,9 +3411,11 @@ footer > * {
     display: flex;
     align-items: center;
     gap: 0;
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
     user-select: none;
     outline: none;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .showcase-carousel-wrapper:focus-visible {
@@ -3442,60 +3444,61 @@ footer > * {
 /* Each slide wrapper */
 .showcase-slide {
     flex: 0 0 auto;
-    width: 340px;
-    min-width: 340px;
-    opacity: 0;
-    transform: scale(0.82) translateY(10px);
-    filter: blur(3px);
-    transition: opacity 0.55s cubic-bezier(0.25, 0.1, 0.25, 1),
-                transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1),
-                filter 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+    width: 380px;
+    min-width: 380px;
+    opacity: 0.45;
+    transform: scale(0.88) translateY(12px);
+    filter: none;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                filter 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     pointer-events: none;
     cursor: default;
 }
 
 .showcase-slide.is-secondary {
     opacity: 0.7;
-    transform: scale(0.92) translateY(4px);
-    filter: blur(1px);
+    transform: scale(0.92) translateY(6px);
+    filter: none;
     pointer-events: auto;
     cursor: pointer;
 }
 
 .showcase-slide.is-active {
     opacity: 1;
-    transform: scale(1) translateY(0);
-    filter: blur(0);
+    transform: scale(1.08) translateY(0);
+    filter: none;
     pointer-events: auto;
     cursor: default;
-    z-index: 3;
+    z-index: 5;
 }
 
 /* The Card */
 .showcase-card {
     background: var(--surface, #ffffff);
     border: 1px solid var(--border-color, #e5e7eb);
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
     transition: box-shadow 0.4s ease, transform 0.4s ease;
     display: flex;
     flex-direction: column;
 }
 
 .showcase-slide.is-active .showcase-card {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(234, 88, 12, 0.08);
+    box-shadow: 0 40px 80px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(234, 88, 12, 0.12);
+    border-color: rgba(234, 88, 12, 0.25);
 }
 
 .showcase-slide.is-active .showcase-card:hover {
-    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(234, 88, 12, 0.15);
-    transform: translateY(-4px);
+    box-shadow: 0 50px 90px rgba(15, 23, 42, 0.2), 0 0 0 1px rgba(234, 88, 12, 0.2);
+    transform: translateY(-6px);
 }
 
 /* Card Image */
 .showcase-card-image {
     position: relative;
-    height: 220px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -3513,17 +3516,18 @@ footer > * {
 /* Category badge */
 .showcase-category-badge {
     position: absolute;
-    top: 14px;
-    left: 14px;
-    background: rgba(0, 0, 0, 0.7);
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg, var(--accent-orange), #f97316);
     backdrop-filter: blur(6px);
     color: #ffffff;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 5px 12px;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
     border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25);
 }
 
 .showcase-badge-design {
@@ -3531,11 +3535,13 @@ footer > * {
 }
 
 /* Card Content */
-.showcase-card-content {
-    padding: 1.4rem 1.4rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.showcase-slide.is-active .showcase-card-content {
+    padding: 1.6rem 1.6rem 1.8rem;
+    gap: 0.6rem;
+}
+
+.showcase-slide.is-active .showcase-card-title {
+    font-size: 1.25rem;
 }
 
 .showcase-card-title {
