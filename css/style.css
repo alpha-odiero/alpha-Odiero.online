@@ -4,8 +4,9 @@
     color-scheme: light;
     --primary-white: #ffffff;
     --dark-navy: #000000;
-    --accent-orange: #000000;
-    --accent-emerald: #000000;
+    --accent-orange: #ea580c;
+    --accent-orange-hover: #c2410c;
+    --accent-emerald: #ea580c;
     --text-primary: #000000;
     --text-secondary: #000000;
     --bg-soft: #ffffff;
@@ -29,6 +30,9 @@
     color-scheme: dark;
     --primary-white: #000000;
     --dark-navy: #ffffff;
+    --accent-orange: #f97316;
+    --accent-orange-hover: #ea580c;
+    --accent-emerald: #f97316;
     --text-primary: #ffffff;
     --text-secondary: #ffffff;
     --bg-soft: #000000;
@@ -183,22 +187,24 @@ h4 {
     display: inline-flex;
     align-items: center;
     padding: 8px 18px;
-    background: var(--text-primary);
-    color: var(--primary-white) !important;
+    background: var(--accent-orange);
+    color: #ffffff !important;
     font-size: 0.92rem;
     font-weight: 600;
     text-decoration: none;
     border-radius: 8px;
     transition: var(--transition-smooth);
     white-space: nowrap;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--accent-orange);
     line-height: 1;
 }
 
 .nav-start-project:hover {
-    background: var(--primary-white);
-    color: var(--text-primary) !important;
+    background: var(--accent-orange-hover);
+    border-color: var(--accent-orange-hover);
+    color: #ffffff !important;
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.3);
 }
 
 .theme-toggle {
@@ -437,17 +443,18 @@ button,
     }
 
 .btn-primary {
-    background: var(--text-primary);
-    color: var(--primary-white);
-    box-shadow: none;
-    border: 1px solid var(--border-color);
+    background: var(--accent-orange);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(234, 88, 12, 0.25);
+    border: 1px solid var(--accent-orange);
 }
 
 .btn-primary:hover {
-    background: var(--primary-white);
-    color: var(--text-primary);
+    background: var(--accent-orange-hover);
+    border-color: var(--accent-orange-hover);
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: none;
+    box-shadow: 0 14px 30px rgba(234, 88, 12, 0.35);
 }
 
 .btn-outline {
@@ -2727,13 +2734,14 @@ footer > * {
 
 .hero-nickname,
 .section-tag {
-    background: var(--surface-muted);
-    border-color: var(--soft-border);
+    background: rgba(234, 88, 12, 0.08);
+    border-color: rgba(234, 88, 12, 0.28);
 }
 
 .btn-primary {
-    background: var(--heading-color);
-    color: var(--primary-white);
+    background: var(--accent-orange);
+    color: #ffffff;
+    border-color: var(--accent-orange);
 }
 
 .btn-outline {
