@@ -97,7 +97,7 @@
     }
 
     :root[data-theme="dark"] .hero {
-        background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.88)), url('../images/fri.jpg') center/cover no-repeat;
+        background: linear-gradient(rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.88)), url('../images/fri.jpg') center/cover no-repeat;
     }
 
     .hero-title {
@@ -491,7 +491,7 @@
     }
 
     .skill-category-clean {
-        border-color: #d4d4d8;
+        border-color: #cbd5e1;
     }
 
     .skill-category-clean h4 {
@@ -502,7 +502,7 @@
         letter-spacing: 0.08em;
         margin-bottom: 0.75rem;
         padding-bottom: 0.6rem;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e2e8f0;
     }
 
     .skill-category-clean ul {
@@ -511,7 +511,7 @@
 
     .skill-category-clean li {
         font-size: 0.85rem;
-        color: #6b7280;
+        color: #64748b;
         line-height: 1.6;
         padding-left: 1rem;
     }
@@ -527,15 +527,15 @@
     }
 
     :root[data-theme="dark"] .skill-category-clean {
-        border-color: #3f3f46;
+        border-color: #334155;
     }
 
     :root[data-theme="dark"] .skill-category-clean h4 {
-        border-bottom-color: #3f3f46;
+        border-bottom-color: #334155;
     }
 
     :root[data-theme="dark"] .skill-category-clean li {
-        color: #d4d4d8;
+        color: #cbd5e1;
     }
 
     .modal-content {
